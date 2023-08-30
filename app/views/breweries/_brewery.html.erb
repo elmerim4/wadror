@@ -14,9 +14,10 @@
   <ol>
 
       <% brewery.beers.each do |beer| %>
-       <li><%= link_to beer.name %></a>
+       <li><%= link_to beer.name, beer %></a>
       <% end %>
 
  </ol>
+ <p>Brewery has <%= pluralize(brewery.ratings.count, "rating")%> with an average of <%=brewery.average_rating %></p>
 
 </div>
